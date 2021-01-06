@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harry Potter</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap css changd -->
+    <link rel="stylesheet" type="text/css" href="path/to/bootstrap.min.css">
+    <!-- This mus be declared after the bootstrap.min.css -->
+    <link rel="stylesheet" type="text/css" href="path/to/your/custom.css">
+
+    <!-- 구글폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+</head>
+<script>
+
+</script>
+<style>
+
+    body {
+        background-image: url('../static/ggg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .navs{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        font-family: 'Redressed', cursive;
+
+    }
+    .nav_item{
+        width: 100%;
+        text-align: center;
+        padding-top: 50px;
+
+    }
+    .nav_link{
+        font-size: 2em;
+        color: white;
+    }
+    .nav_link:hover{
+        text-decoration: none;
+        color: grey;
+
+    }
+
+    /**.nav-item {*/
+    /*    font-size: 1.5em;*/
+    /*    */
+
+
+
+    /*}*/
+
+    /**.nav-link active {*/
+    /*    color: orangered;*/
+
+    /*}*/
+
+</style>
+<body>
+<header>
+    <ul class="navs">
+        <li class="nav_item">
+            <a class="nav_link" href="#">Characters </a>
+        </li>
+        <li class="nav_item">
+             <a class="nav_link" href="#">Spell</a>
+        </li>
+        <li class="nav_item">
+             <a class="nav_link" href="#">Series</a>
+        </li>
+        <li class="nav_item">
+             <a class="nav_link" href="#">OST</a>
+        </li>
+    </ul>
+
+<!--        <ul class="nav nav-pills nav-fill">-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link active" href="#" background-color="white">Characters</a>-->
+<!--            </li>&ndash;&gt;-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">0</a>-->
+<!--            </li>&ndash;&gt;-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="#">0</a>-->
+<!--            </li>&ndash;&gt;-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link disabled" href="#">0</a>-->
+<!--            </li>-->
+<!--        </ul>-->
+</header>
+<div class="wrap">
+    <!--    <iframe src="../static/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>-->
+    <audio autoplay loop id="main_audio">
+        <source src="../static/Harry%20Potter%20Theme%20Song.mp3">
+    </audio>
+
+
+</div>
+<footer>
+
+
+</footer>
+</body>
+</html>
