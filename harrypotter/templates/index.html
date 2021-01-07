@@ -8,10 +8,13 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
 
-    <!-- JS -->
+    <!-- jquery,JS , Bootstrap js-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
 
     <!-- Bootstrap css changd -->
@@ -21,87 +24,195 @@
 
     <!-- 구글폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+
 </head>
 <script>
+    <!--드롭메뉴-->
+    $(document).ready(function () {
+        $(".nav_item").mouseover(function () {
+            $(this).children(".submenus").stop().slideDown();
+        });
+        $(".nav_item").mouseleave(function () {
+            $(this).children(".submenus").stop().slideUp();
+        });
 
+    });
 </script>
+
+
 <style>
 
     body {
-        background-image: url('../static/ggg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
+        padding: 0px;
+        margin: 0px;
+        /*background-image: url('https://assets.pinterest.com/ext/embed.html?id=695806211170395841 ');*/
+        /*background-repeat: no-repeat;*/
+        /*background-size: cover;*/
     }
-    .navs{
+
+    .bground {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        /*텍스트를 동영상 위에 올릴 수 있도록 하는 position속성*/
+        position: relative;
+    }
+
+    /*네비게이션, 드롭메뉴*/
+    .navs {
         list-style-type: none;
+        margin: 0;
+        padding:0;
         display: flex;
         flex-direction: row;
         font-family: 'Redressed', cursive;
 
-    }
-    .nav_item{
-        width: 100%;
-        text-align: center;
-        padding-top: 50px;
 
     }
-    .nav_link{
-        font-size: 2em;
-        color: white;
+
+    .nav_item {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0px 10px;
+        font-size: 40px;
+        color: black;
+        display: inline-block;
+        position: relative;
+
     }
-    .nav_link:hover{
+    .main_menu{
+        color:black;
+    }
+    .main_menu:hover {
         text-decoration: none;
         color: grey;
 
+
     }
 
-    /**.nav-item {*/
-    /*    font-size: 1.5em;*/
-    /*    */
+    .submenus {
+        list-style-type: none;
+        width :100%;
+        margin: 0;
+        padding: 0;
+        display: none;
+        position: absolute;
+        z-index: 1;
+        text-align: center;
+        background-color: rgba(255,255,255,0.5);
+
+
+    }
+
+
+    .submenus > li > a {
+        /*display: inline-block;*/
+
+        text-align: center;
+        color: black;
+        font-size: 30px;
+    }
+
+    .submenus > li > a:hover {
+        text-decoration: none;
+        color: 	#696969;
+        /*background-color: #f1f1f1;*/
+        /*border-radius: 30px;*/
 
 
 
-    /*}*/
+    }
 
-    /**.nav-link active {*/
-    /*    color: orangered;*/
-
-    /*}*/
 
 </style>
 <body>
+
+
 <header>
+<!--네비게이션-->
+<nav>
     <ul class="navs">
         <li class="nav_item">
-            <a class="nav_link" href="#">Characters </a>
+            <a class="main_menu" href="#">Characters</a>
+            <ul class="submenus">
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+            </ul>
         </li>
         <li class="nav_item">
-             <a class="nav_link" href="#">Spell</a>
+            <a class="main_menu" href="#">Spell</a>
+            <ul class="submenus">
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+            </ul>
         </li>
         <li class="nav_item">
-             <a class="nav_link" href="#">Series</a>
+            <a class="main_menu" href="Series.html">Series</a>
+        </li>
+
         </li>
         <li class="nav_item">
-             <a class="nav_link" href="#">OST</a>
+            <a class="main_menu" href="#">OST</a>
+            <ul class="submenus">
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+                <li>
+                    <a href="#">Harry Potter</a>
+                </li>
+            </ul>
         </li>
     </ul>
-
-<!--        <ul class="nav nav-pills nav-fill">-->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link active" href="#" background-color="white">Characters</a>-->
-<!--            </li>&ndash;&gt;-->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link" href="#">0</a>-->
-<!--            </li>&ndash;&gt;-->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link" href="#">0</a>-->
-<!--            </li>&ndash;&gt;-->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link disabled" href="#">0</a>-->
-<!--            </li>-->
-<!--        </ul>-->
+</nav>
 </header>
+<!--Background-->
+<div class="bground">
+    <video muted autoplay loop width="100%" height="100%">
+        <source src="../static/index_background.mp4" type="video/mp4">
+    </video>
+
+
+</div>
+
 <div class="wrap">
+
+
     <!--    <iframe src="../static/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>-->
     <audio autoplay loop id="main_audio">
         <source src="../static/Harry%20Potter%20Theme%20Song.mp3">
@@ -111,7 +222,8 @@
 </div>
 <footer>
 
-
 </footer>
+
 </body>
+
 </html>
