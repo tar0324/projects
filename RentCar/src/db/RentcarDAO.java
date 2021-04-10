@@ -244,8 +244,7 @@ public class RentcarDAO {
 		
 		getCon();
 		try {
-			String sql = "select * from rentcar natural join carreserve "
-					+ "where sysdate < to_date(rday,'YYYY-MM-DD') AND id= ?";
+			String sql = "select * from  rentcar c, carreserve r where r.no = c.no and sysdate < to_date(rday, 'YYYY-MM-DD') and r.id=?";
 			pstmt = con.prepareStatement(sql);
 			
 			pstmt.setString(1, id);
@@ -257,8 +256,8 @@ public class RentcarDAO {
 				bean.setNo(rs.getInt(1));
 				bean.setName(rs.getString(2));
 				bean.setImg(rs.getString(7));
-				bean.setQty(rs.getInt(11));
-				bean.setRday(rs.getString(13));
+				bean.setQty(rs.getInt(12));
+				bean.setRday(rs.getString(14));
 				
 				v.add(bean);
 			}
@@ -276,8 +275,7 @@ public class RentcarDAO {
 	
 		getCon();
 		try {
-			String sql = "select * from rentcar natural join carreserve "
-					+ "where sysdate < to_date(rday,'YYYY-MM-DD') AND id= ? AND no=? ";
+			String sql = "select * from  rentcar c, carreserve r where r.no = c.no and sysdate < to_date(rday, 'YYYY-MM-DD') and r.id=? and r.no=? ";
 			pstmt = con.prepareStatement(sql);
 			
 			pstmt.setString(1, id);
@@ -291,13 +289,13 @@ public class RentcarDAO {
 				bean.setName(rs.getString(2));
 				bean.setPrice(rs.getInt(4));
 				bean.setImg(rs.getString(7));
-				bean.setQty(rs.getInt(11));
-				bean.setDday(rs.getInt(12));
-				bean.setRday(rs.getString(13));
-				bean.setUsein(rs.getInt(14));
-				bean.setUsewifi(rs.getInt(15));
-				bean.setUsenavi(rs.getInt(16));
-				bean.setUseseat(rs.getInt(17));
+				bean.setQty(rs.getInt(12));
+				bean.setDday(rs.getInt(13));
+				bean.setRday(rs.getString(14));
+				bean.setUsein(rs.getInt(15));
+				bean.setUsewifi(rs.getInt(16));
+				bean.setUsenavi(rs.getInt(17));
+				bean.setUseseat(rs.getInt(18));
 				
 			}
 			con.close();
